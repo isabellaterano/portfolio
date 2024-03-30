@@ -1,0 +1,50 @@
+::-webkit-scrollbar {
+  background: #292828;
+  width: 1em;
+}
+::-webkit-scrollbar-track {
+  background: hsl(0, 2%, 24%);
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 2%, 8%);
+  border-radius: 100vw;
+}
+
+:root {
+  --blue-color: #0066cc;
+  --white-color: #f9fafb;
+  --stone-color: #0c0a09;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+  color: var(--white-color);
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+}
+
+.margin {
+  margin: 0 5rem;
+}
+
+@media (max-width: 738px) {
+  .margin {
+    margin: 0 1rem;
+  }
+}

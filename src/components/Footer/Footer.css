@@ -1,0 +1,32 @@
+.footer {
+  border-top: 1px solid var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  column-gap: 1.25rem;
+  padding: 1rem;
+}
+
+.footer__social-icon {
+  width: 35px;
+  color: var(--white-color);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.footer__social-icon:hover {
+  color: var(--blue-color);
+}
+
+.footer__copyright {
+  border-top: 1px solid var(--white-color);
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 14px;
+}

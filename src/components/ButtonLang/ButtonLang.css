@@ -1,0 +1,15 @@
+.lang__en {
+  margin-right: 0.3rem;
+}
+
+.lang__en,
+.lang__pt {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  background: transparent;
+  padding: 0.2rem;
+  position: relative;
+  color: var(--white-color);
+}

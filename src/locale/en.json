@@ -1,0 +1,30 @@
+{
+  "translation": {
+    "sidebar.project": "Projects",
+    "sidebar.about": "About",
+    "sidebar.contact": "Contact",
+    "hero.title": "Front-end Web Developer",
+    "projects.title": "Projects",
+    "productcard.title.estate": "DreamDwell Real Estate",
+    "productcard.description.estate": "DreamDwell is a real estate web application designed to showcase our range of properties and services. With authentication, property creation and search functionality",
+    "productcard.title.chair": "Chair Ecommerce",
+    "productcard.description.chair": "Chair is ecommerce platform dedicated to providing the best selection of chairs, this application will allow you to add products into a cart and make payments through Stripe.",
+    "productcard.title.qrcode": "QR-Code Generator",
+    "productcard.description.qrcode": "This website is a qr code generator, enter your url or a word and it will generate your qr code.",
+    "productcard.title.landing": "Landing Page Museum",
+    "productcard.description.landing": "A minimalist landing page for a museum.",
+    "productcard.title.extension": "Social Media Blocker",
+    "productcard.description.extension": "This Google Chrome extension themed after the animated series 'Rick and Morty' blocks social networks so you can stop procrastinating.",
+    "about.title": "About",
+    "about.me": "Hi there! I'm Isabella Terano, a Front-End Web Developer and UX Designer based in Brazil.  When I'm not writing code, you can often find me immersed in the world of horror films. Yes, I'm that person who eagerly anticipates every jump scare and plot twist! I’m always curious to learn more, when it comes to explore new technologies and design. My focus is on empowering users through intuitive design, accessibility, and optimizing performance for a seamless browsing experience.",
+    "contact.title": "Get in Touch",
+    "contact.name": "Name",
+    "placeholder.name": "Enter your Name",
+    "contact.email": "Email",
+    "placeholder.email": "Enter your Email",
+    "contact.message": "Message",
+    "placeholder.message": "Enter your message",
+    "button.loading": "Sending...",
+    "contact.button": "Send "
+  }
+}
