@@ -1,4 +1,5 @@
-import { Envelope, GithubLogo } from "@phosphor-icons/react";
+import email from "../../assets/icon/envelope.svg";
+import github from "../../assets/icon/github.svg";
 import "./Footer.css";
 
 const Footer = () => {
@@ -11,14 +12,14 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="footer__social-icon"
         >
-          <GithubLogo size={28} alt="github icon" />
+          <img src={github} alt="github icon" />
         </a>
 
         <button
           onClick={() => (window.location = "mailto:isabellaiterano@gmail.com")}
           className="footer__social-icon"
         >
-          <Envelope size={28} alt="Envelope icon" />
+          <img src={email} alt="email icon" />
         </button>
       </div>
 

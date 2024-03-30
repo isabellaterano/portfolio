@@ -1,6 +1,11 @@
 import { useTranslation } from "react-i18next";
-import "./ProjectCard.css";
 import { motion } from "framer-motion";
+import realEstate from "../../assets/images/realestate.png";
+import ecommerce from "../../assets/images/ecommercechair.png";
+import qrcode from "../../assets/images/qrcode.png";
+import landingPage from "../../assets/images/landingpage.png";
+import extension from "../../assets/images/extension.png";
+import "./ProjectCard.css";
 
 const ProjectCard = () => {
   const { t } = useTranslation();
@@ -13,7 +18,7 @@ const ProjectCard = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="src/assets/images/realestate.png" alt="real estate web" />
+          <img src={realEstate} alt="real estate web" />
         </motion.div>
 
         <motion.div className="productcard__description">
@@ -47,10 +52,7 @@ const ProjectCard = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            src="src/assets/images/ecommercechair.png"
-            alt="ecommerce website"
-          />
+          <img src={ecommerce} alt="ecommerce website" />
         </motion.div>
 
         <motion.div className="productcard__description">
@@ -86,7 +88,7 @@ const ProjectCard = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="src/assets/images/qrcode.png" alt="qrcode website" />
+          <img src={qrcode} alt="qrcode website" />
         </motion.div>
 
         <motion.div className="productcard__description">
@@ -120,10 +122,7 @@ const ProjectCard = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            src="src/assets/images/landingpage.png"
-            alt="landing page museum"
-          />
+          <img src={landingPage} alt="landing page museum" />
         </motion.div>
 
         <motion.div className="productcard__description">
@@ -157,7 +156,7 @@ const ProjectCard = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="src/assets/images/extension.png" alt="" />
+          <img src={extension} alt="" />
         </motion.div>
 
         <motion.div className="productcard__description">
