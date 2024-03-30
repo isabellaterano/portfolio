@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { XSquare, List } from "@phosphor-icons/react";
+import menu from "../../assets/icon/menu.svg";
+import close from "../../assets/icon/close.svg";
 import ButtonLang from "../ButtonLang/ButtonLang";
 import Sidebar from "./Sidebar";
 import "./Navbar.css";
@@ -17,7 +18,21 @@ const Navbar = () => {
         <div className="header__links">
           <Sidebar open={open} toggleMenu={toggleMenu} />
           <button onClick={toggleMenu} className="menu-btn">
-            {open ? <XSquare size={28} /> : <List size={28} />}
+            {open ? (
+              <img
+                src={close}
+                alt="close icon"
+                className="close-icon"
+                height={28}
+              />
+            ) : (
+              <img
+                src={menu}
+                alt="menu icon"
+                className="menu-icon"
+                height={28}
+              />
+            )}
           </button>
           <div>
             <Link className="header__logo">IT</Link>

@@ -39,14 +39,15 @@
   background-color: transparent;
   border: none;
   z-index: 999;
-  color: var(--white-color);
 }
 
-.menu-btn:hover {
-  color: var(--blue-color);
+.menu-btn img {
+  background-color: var(--white-color);
+  border-radius: 2px;
 }
 
-@media (max-width: 760px) {
+.menu-btn img:hover {
+  background-color: var(--blue-color);
 }
 
 @media (max-width: 1325px) {
