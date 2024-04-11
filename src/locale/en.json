@@ -5,6 +5,8 @@
     "sidebar.contact": "Contact",
     "hero.title": "Front-end Web Developer",
     "projects.title": "Projects",
+    "productcard.title.medical": "Medical Appointment Booking",
+    "productcard.description.medical": "A user-friendly, intuitive, and accessible platform that helps connect patients with doctors and specialists for consultations and medical prescriptions. This is the Capstone Project of the IBM Front-End Developer course by IBM on Coursera.",
     "productcard.title.estate": "DreamDwell Real Estate",
     "productcard.description.estate": "DreamDwell is a real estate web application designed to showcase our range of properties and services. With authentication, property creation and search functionality",
     "productcard.title.chair": "Chair Ecommerce",

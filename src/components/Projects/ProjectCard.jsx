@@ -5,12 +5,47 @@ import ecommerce from "../../assets/images/ecommercechair.png";
 import qrcode from "../../assets/images/qrcode.png";
 import landingPage from "../../assets/images/landingpage.png";
 import extension from "../../assets/images/extension.png";
+import stayHealthy from "../../assets/images/stayhealthy.png";
 import "./ProjectCard.css";
 
 const ProjectCard = () => {
   const { t } = useTranslation();
   return (
     <div className="productcard">
+      <div className="wrapper">
+        <motion.div
+          className="productcard-img"
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img src={stayHealthy} alt="website StayHealthy" />
+        </motion.div>
+
+        <motion.div className="productcard__description">
+          <h3>{t("productcard.title.medical")}</h3>
+          <p>{t("productcard.description.medical")}</p>
+          <span>React - Express - MongoDB - Node - Tailwind - daisyUI</span>
+          <div className="productcard__button">
+            <a
+              href="https://stayhealthy-7wyt.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="productcard__btn"
+            >
+              Demo
+            </a>
+            <a
+              href="https://github.com/isabellaterano/medical-booking"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="productcard__btn"
+            >
+              Source
+            </a>
+          </div>
+        </motion.div>
+      </div>
       <div className="wrapper">
         <motion.div
           className="productcard-img"
@@ -45,6 +80,7 @@ const ProjectCard = () => {
           </div>
         </motion.div>
       </div>
+
       <div className="wrapper">
         <motion.div
           className="productcard-img"
