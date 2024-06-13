@@ -1,6 +1,7 @@
 import Html from "../../assets/icon/html.svg";
 import Css from "../../assets/icon/css.svg";
 import Javascript from "../../assets/icon/javascript.svg";
+import Java from "../../assets/icon/java.svg";
 import React from "../../assets/icon/react.svg";
 import Sass from "../../assets/icon/sass.svg";
 import Tailwind from "../../assets/icon/tailwind.svg";
@@ -20,6 +21,10 @@ const images = [
   {
     name: "Javascript",
     image: Javascript,
+  },
+  {
+    name: "Java",
+    image: Java,
   },
   {
     name: "React",

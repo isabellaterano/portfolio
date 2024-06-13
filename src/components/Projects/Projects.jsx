@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <section className="projects" id="projects">
       <span className="anchor" id="section1"></span>
-      <h2 className="projects__title">{t("projects.title")}</h2>
+      <h2 className="projects__title">{t("project")}</h2>
       <div>
         <ProjectCard />
       </div>

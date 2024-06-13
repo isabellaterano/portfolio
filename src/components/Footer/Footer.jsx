@@ -1,5 +1,4 @@
-import email from "../../assets/icon/envelope.svg";
-import github from "../../assets/icon/github.svg";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -12,19 +11,28 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="footer__social-icon"
         >
-          <img src={github} alt="github icon" />
+          <FaGithub className="icon" />
         </a>
-
+        <a
+          href="https://github.com/isabellaterano"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer__social-icon"
+        >
+          <FaLinkedin className="icon" />
+        </a>
         <button
           onClick={() => (window.location = "mailto:isabellaiterano@gmail.com")}
           className="footer__social-icon"
         >
-          <img src={email} alt="email icon" />
+          <FaEnvelope className="icon" />
         </button>
       </div>
-
       <div className="footer__copyright">
-        <p>Copyright &#169; {new Date().getFullYear()} Isabella Terano</p>
+        <p>
+          &#169; {new Date().getFullYear()} Jasper Everett. Made by:
+          <a href="https://github.com/isabellaterano"> Isabella Terano</a>
+        </p>
       </div>
     </footer>
   );
