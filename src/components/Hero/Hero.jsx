@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import "./hero.css";
+import "./Hero.css";
 const sliderVariants = {
   initial: {
     x: 0,
