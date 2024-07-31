@@ -1,5 +1,5 @@
 {
-  "homepage": "https://isabe.github.io/portfolio/",
+  "homepage": "https://isabellaterano.github.io/portfolio/",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +11,6 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-    
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
