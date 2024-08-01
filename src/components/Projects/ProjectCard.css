@@ -1,90 +1,79 @@
-.productcard {
+.project-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
-  padding: 16px;
+  gap: 1.5rem;
 }
 
-.wrapper {
-  flex: 1 1 calc(33.333% - 32px);
-  max-width: calc(33.333% - 32px);
-  background-color: #151212;
+.project-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: calc(33.333% - 2rem);
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
-.wrapper:hover {
+.project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.productcard__description {
-  padding: 16px;
+.project-card__description {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.productcard__description h3 {
-  font-size: 1.25em;
-  margin-bottom: 8px;
+.project-card__description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #333;
 }
 
-.productcard__description span {
+.project-card__description span {
   display: block;
-  font-size: 0.875em;
-  color: #555;
-  margin-bottom: 16px;
+  font-size: 0.875rem;
+  color: #777;
+  margin-bottom: 1rem;
 }
 
-.productcard__button {
+.project-card__buttons {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.productcard__btn {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  width: fit-content;
+.project-card__btn {
+  padding: 0.5rem 1.25rem;
   font-weight: 500;
-  color: var(--stone-color);
-  background-color: var(--blue-color);
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  box-shadow: 3px 3px 0 black;
+  color: #d3d3d3;
+  background-color: #007bff;
   text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.fix {
-  margin-top: 2.8rem;
-}
-.fix-button {
-  margin-top: 1.5rem;
-}
-
-.fix-btn {
-  margin-top: 2.3rem;
-}
-
-.productcard__btn:hover {
-  box-shadow: none;
-  transform: translateX(3px);
-  transform: translateY(3px);
+.project-card__btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
-    flex: 1 1 calc(50% - 32px);
-    max-width: calc(50% - 32px);
+  .project-card {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
   }
 }
 
 @media (max-width: 768px) {
-  .wrapper {
+  .project-card {
     flex: 1 1 100%;
     max-width: 100%;
   }

@@ -1,12 +1,13 @@
 .projects {
   width: 100%;
-  height: 100%;
+  padding: 2rem 1rem;
 }
 
 .projects__title {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
 }
 
 .anchor {
@@ -14,4 +15,11 @@
   height: 115px;
   margin-top: -3rem;
   visibility: hidden;
+}
+
+.projects__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }

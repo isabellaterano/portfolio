@@ -1,28 +1,49 @@
 ::-webkit-scrollbar {
-  background: #292828;
   width: 1em;
+  background: var(--scrollbar-bg);
 }
+
 ::-webkit-scrollbar-track {
-  background: hsl(0, 2%, 24%);
+  background: var(--scrollbar-track-bg);
   border-radius: 100vw;
   margin-block: 0.5em;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: hsl(0, 2%, 8%);
+  background: var(--scrollbar-thumb-bg);
   border-radius: 100vw;
 }
 
+/* Root Variables */
 :root {
   --blue-color: #0066cc;
   --white-color: #f9fafb;
   --stone-color: #0c0a09;
+  --scrollbar-bg: #292828;
+  --scrollbar-track-bg: hsl(0, 2%, 24%);
+  --scrollbar-thumb-bg: hsl(0, 2%, 8%);
+  --bg-gradient-start: #434343;
+  --bg-gradient-end: #000000;
+  --margin-large: 5rem;
+  --margin-small: 1rem;
+  --primary-font: "Raleway", sans-serif;
+  --heading-font-size: 2.5rem;
+  --text-font-size: 1rem;
+  --input-padding: 12px 15px;
+  --input-border-radius: 6px;
+  --button-padding: 10px 20px;
+  --button-bg-color: var(--blue-color);
+  --button-text-color: var(--white-color);
+  --button-disabled-bg-color: #999;
+  --transition-duration: 0.3s;
 }
 
+/* Reset & Base Styles */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font);
 }
 
 html {
@@ -30,21 +51,26 @@ html {
 }
 
 body {
-  background: #000000;
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  background: linear-gradient(to right, #434343, #000000);
+  background: var(--bg-gradient-start);
+  background: -webkit-linear-gradient(
+    to right,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
+  background: linear-gradient(
+    to right,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
   color: var(--white-color);
-  letter-spacing: 2px;
-  line-height: 1.5;
-  font-optical-sizing: auto;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  font-size: var(--text-font-size);
+  transition: background var(--transition-duration) ease,
+    color var(--transition-duration) ease;
 }
 
+/* Utility Classes */
 .margin {
-  margin: 0 5rem;
-}
-
-@media (max-width: 738px) {
-  .margin {
-    margin: 0 1rem;
-  }
+  margin: 0 var(--margin-large);
 }

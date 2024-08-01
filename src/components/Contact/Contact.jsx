@@ -4,6 +4,13 @@ import useAlert from "../../hooks/useAlert";
 import Alert from "./Alert";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import "./Contact.css";
 
 const Contact = () => {
@@ -18,8 +25,10 @@ const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -32,34 +41,31 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Isabella",
           from_email: form.email,
-          to_email: "isabellaiterano@gmail.com",
+          to_email: "isabella@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         setIsLoading(false);
-        //SHOW SUCCESS MESSAGE
         showAlert({
           show: true,
-          text: "Message sent successfully!",
+          text: t("message.success"),
           type: "success",
         });
-        //HIDE AN ALERT
 
         setTimeout(() => {
           hideAlert();
           setForm({ name: "", email: "", message: "" });
-        });
+        }, 3000);
       })
       .catch((error) => {
         setIsLoading(false);
-        console.log(error);
+        console.error(error);
 
-        //ERROR MESSAGE
         showAlert({
           show: true,
-          text: "I didnt receive your message!",
+          text: t("message.failure"),
           type: "danger",
         });
       });
@@ -71,16 +77,17 @@ const Contact = () => {
 
       <motion.h2
         className="contact-title"
-        whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
         {t("contact.title")}
       </motion.h2>
 
       <form className="contact__form" onSubmit={handleSubmit}>
-        <label>{t("contact.name")}</label>
+        <label htmlFor="name">{t("contact.name")}</label>
         <input
+          id="name"
           type="text"
           name="name"
           className="input"
@@ -89,8 +96,9 @@ const Contact = () => {
           value={form.name}
           onChange={handleChange}
         />
-        <label>{t("contact.email")}</label>
+        <label htmlFor="email">{t("contact.email")}</label>
         <input
+          id="email"
           type="email"
           name="email"
           className="input"
@@ -99,8 +107,9 @@ const Contact = () => {
           value={form.email}
           onChange={handleChange}
         />
-        <label>{t("contact.message")}</label>
+        <label htmlFor="message">{t("contact.message")}</label>
         <textarea
+          id="message"
           name="message"
           className="textarea"
           placeholder={t("placeholder.message")}
@@ -108,11 +117,49 @@ const Contact = () => {
           value={form.message}
           onChange={handleChange}
         />
-
         <button type="submit" className="contact-btn" disabled={isLoading}>
-          {isLoading ? `${t("button.loading")}` : `${t("contact.button")}`}
+          {isLoading ? t("button.loading") : t("contact.button")}
         </button>
       </form>
+
+      <div className="contact-info">
+        <div className="contact-info__item">
+          <MdEmail className="contact-info__icon" />
+          <a href="mailto:isabella@gmail.com" className="contact-info__text">
+            isabella@gmail.com
+          </a>
+        </div>
+        <div className="contact-info__socials">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF className="contact-info__icon" />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="contact-info__icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedinIn className="contact-info__icon" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="contact-info__icon" />
+          </a>
+        </div>
+      </div>
     </section>
   );
 };

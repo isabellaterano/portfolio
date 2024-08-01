@@ -8,7 +8,7 @@ const Projects = () => {
     <section className="projects" id="projects">
       <span className="anchor" id="section1"></span>
       <h2 className="projects__title">{t("project")}</h2>
-      <div>
+      <div className="projects__grid">
         <ProjectCard />
       </div>
     </section>
