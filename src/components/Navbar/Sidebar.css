@@ -14,11 +14,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 30vw;
   height: 100vh;
-  background: #232526;
-  background: -webkit-linear-gradient(to right, #414345, #232526);
-  background: linear-gradient(to right, #414345, #232526);
+  background: var(--gradient);
   padding: 2rem;
 }
 
@@ -37,22 +36,12 @@
   text-transform: uppercase;
 }
 
-.mobile__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bolder;
-  color: var(--white-color);
-  text-decoration: line-through;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
 .nav__links {
   position: relative;
   cursor: pointer;
-  color: var(--white-color);
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bolder;
   text-decoration: none;
   transition: 0.4s;
 }
@@ -65,6 +54,9 @@
 @media (max-width: 760px) {
   .mobile__menu-container {
     width: 60vw;
+  }
+  .nav__links {
+    font-size: 1.5rem;
   }
 }
 

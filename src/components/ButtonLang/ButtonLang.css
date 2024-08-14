@@ -11,5 +11,5 @@
   background: transparent;
   padding: 0.2rem;
   position: relative;
-  color: var(--white-color);
+  font-weight: bold;
 }

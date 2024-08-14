@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="footer__copyright">
         <p>
           &#169; {new Date().getFullYear()} Jasper Everett. Made by:
-          <a href="https://github.com/isabellaterano"> Isabella Terano</a>
+          <a href="https://isabellaterano.vercel.app/en"> Isabella.</a>
         </p>
       </div>
     </footer>

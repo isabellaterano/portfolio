@@ -8,9 +8,6 @@ const Sidebar = ({ open, toggleMenu }) => {
   return (
     <nav className={`mobile-menu ${open ? "active" : ""}`} onClick={toggleMenu}>
       <div className="mobile__menu-container">
-        <Link className="mobile__logo">
-          <img src="/logo.svg" alt="logo" width={50} height={50} />
-        </Link>
         <ul>
           <li>
             <Link to="#hero" className="nav__links active">
@@ -20,6 +17,11 @@ const Sidebar = ({ open, toggleMenu }) => {
           <li>
             <Link to="#about" className="nav__links active">
               {t("about")}
+            </Link>
+          </li>
+          <li>
+            <Link to="#experience" className="nav__links active">
+              {t("experience")}
             </Link>
           </li>
           <li>

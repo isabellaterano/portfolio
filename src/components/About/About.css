@@ -1,40 +1,75 @@
 .about {
+  min-height: 100dvh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100dvh;
+  text-align: center;
   padding: 20px;
-  margin-top: 4rem;
 }
 
-.image-section,
-.text-section {
-  flex: 1 1 45%;
-  margin: 10px;
-  min-width: 300px;
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: black;
 }
 
-.image-section img {
-  width: 60%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
+.about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  border-radius: 8px; /* Optional: Add some rounded corners */
+}
+
 .text-section {
-  color: white;
-  text-align: left;
-  padding: 20px;
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-.text-section h1 {
-  margin-bottom: 20px;
-  font-size: 2em;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .text-section {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
 }
 
-.text-section p {
-  font-size: 1.2em;
-  line-height: 1.5;
+@media (max-width: 480px) {
+  .about h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-section {
+    font-size: 0.9rem;
+  }
 }

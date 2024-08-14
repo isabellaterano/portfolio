@@ -1,8 +1,17 @@
 import { MotionConfig, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect } from "react";
 
-export const AnimatedHamburgerButton = () => {
-  const [active, setActive] = useState(false);
+export const AnimatedHamburgerButton = ({ isOpen, toggleMenu }) => {
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape" && isOpen) {
+        toggleMenu();
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen, toggleMenu]);
+
   return (
     <MotionConfig
       transition={{
@@ -12,8 +21,8 @@ export const AnimatedHamburgerButton = () => {
     >
       <motion.button
         initial={false}
-        animate={active ? "open" : "closed"}
-        onClick={() => setActive((pv) => !pv)}
+        animate={isOpen ? "open" : "closed"}
+        onClick={toggleMenu}
         className="line"
       >
         <motion.span
